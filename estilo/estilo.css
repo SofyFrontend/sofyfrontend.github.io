@@ -157,11 +157,11 @@ header h1{
     font-family: 'Bree Serif', serif;
 }
 .letra_azul:hover{
-    color:var(--oscuro);
+    color:blue;
     font-size: 1.2em;
 }
 .letra_malva:hover{
-    color:purple;
+    color:violet;
     font-size: 1.2em;
 }
 .contenedor_rrss{
