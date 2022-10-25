@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuaderno de alumnos</title>
+    <link rel="icon" href="../imagenes/iconos/favicon.png">
+    <link href="estilo/estilo-alumnos.css" rel="stylesheet">    
+</head>
+<body>
+    <main>
+        <header>
+            <h1 id="titulo_sede">
+               Galeria de ejercicios para mis alumnos
+            </h1>
+        </header>
+        <section id="section_html">
+            <h2>
+                Ejercicios HTML
+            </h2>
+            <article></article>
+            <article></article>
+            <article></article>
+        </section>
+        <section id="section_css">
+            <h2>
+                Ejercicios CSS
+            </h2>
+            <article id="tarea1">
+                <h2 class="subtitulo">Ejercio 1:Título con letra de molde </h2>
+                <p>
+En este ejercicio:<br>
+Con el uso de la propiedad "background-clip" y el valor "text", se convierte visualmente
+el texto en un molde, con la propiedad "color" y el valor de "transparent".<br>
+ El texto se convierte en una ventana que permite ver el fondo. 
+ Actualmente hay navegadores que no ejecutan esta propiedad,
+ para ello añadimos -webkit 
+</p>
+<div id="imagen_1">
+<img src="../imagenes/codigo/codigo_1.png" alt="ejemplo de código con el uso de background-clip" id="codigo_1"/>
+</div>
+<p>
+    Maqueta el header de una web,cuyo texto sea tu nombre y el fondo una imagen de unsplash, u otro 
+    recurso de imagenes de uso libre.
+</p>
+<p id="bg_molde">
+    <span id="molde">HOLA</span>
+</p>
+            </article>
+            <article id="tarea2"></article>
+            <article></article>
+        </section>
+        <section id="section_js">
+            <h2>
+                Ejercicios js
+            </h2>
+            <article id="js_vanilla"></article>
+            <article id="js_jquery"></article>
+            <article id="js_librerias"></article>
+        </section>
+        <span><a href="index.html" style="color:aliceblue">Volver a inicio</a></span>
+    </main>
+
+    <!-- ******************************************************************* -->
+    <!-- particles.js container --> 
+    <div id="particles-js"></div> 
+    <!-- stats - count particles --> 
+    <div class="count-particles"></div>
+<!--página-->
+
+     
+<!--*****************************************************************************-->         
+    <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js">
+    </script> <!-- stats.js lib --> 
+    <script src="http://threejs.org/examples/js/libs/stats.min.js"></script>
+    <script src="../script/particles.min.js"></script>
+    <script>
+        particlesJS("particles-js",
+         {"particles":{"number":{"value":192,"density":
+         {"enable":true,"value_area":2083.1330320802504}}
+         ,"color":{"value":"#2552e3"},"shape":{"type":"circle","stroke":
+         {"width":0,"color":"#000000"},"polygon":{"nb_sides":5},"image":
+         {"src":"img/github.svg","width":100,"height":100}},"opacity":
+         {"value":0.5,"random":true,"anim":{"enable":false,"speed":1,
+         "opacity_min":0.1,"sync":false}},"size":{"value":10,"random":true,"anim":
+         {"enable":false,"speed":40,"size_min":0.1,"sync":false}},"line_linked":
+         {"enable":false,"distance":500,"color":"#39f2d1","opacity":0.4,"width":2},
+         "move":{"enable":true,"speed":6,"direction":"right","random":false,
+         "straight":false,"out_mode":"out","bounce":false,"attract":
+         {"enable":false,"rotateX":600,"rotateY":1200}}},"interactivity":
+         {"detect_on":"canvas","events":{"onhover":{"enable":true,"mode":"grab"},
+         "onclick":{"enable":true,"mode":"repulse"},"resize":true},"modes":{"grab":
+         {"distance":400,"line_linked":{"opacity":0.5}},"bubble":
+         {"distance":400,"size":4,"duration":0.3,"opacity":1,"speed":3},"repulse":
+         {"distance":200,"duration":0.4},"push":{"particles_nb":4},"remove":
+         {"particles_nb":2}}},"retina_detect":true});
+         var count_particles, stats, update; stats = new Stats; stats.setMode(0);
+          stats.domElement.style.position = 'absolute';
+           stats.domElement.style.left = '0px';
+            stats.domElement.style.top = '0px';
+            document.body.appendChild(stats.domElement);
+            count_particles = document.querySelector('.js-count-particles');
+            update = function() { stats.begin(); stats.end(); 
+            if (window.pJSDom[0].pJS.particles && window.pJSDom[0].pJS.particles.array) 
+            { count_particles.innerText = window.pJSDom[0].pJS.particles.array.length; }
+             requestAnimationFrame(update); };
+         requestAnimationFrame(update);;
+    </script>
+</body>
+</html>

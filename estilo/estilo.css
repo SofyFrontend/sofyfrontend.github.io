@@ -1,0 +1,255 @@
+/* declaración de variables y estilos generales */
+:root{
+    --negro: #04080F;
+    --azul-oscuro: #507dbc;
+    --azul-medio: #a1c6ea;
+    --azul-claro: #bbd1ea;
+    --blanco: #fff;
+    --oscuro: #025159; 
+}
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+ /* layout para movil*/
+@media screen and (max-width: 600px){
+    body{
+        width: 100vw;
+        height: 100vh;
+        background-image: url(../imagenes/laptop\ reading.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    #movil{
+        text-align: center;
+    }
+    #footer_movil{
+        position: fixed;
+        bottom: 2px;
+    }
+header, section {
+    display: none;
+}
+
+}
+@media screen and (min-width: 600px){
+    /*el texto proximamente no se muestra*/
+    #movil,#footer_movil{
+        display: none;
+    }
+/*codigo copiado de howtow3c y adaptado al diseño filtro de elementos*/
+.container {
+    overflow: hidden;
+  }
+  
+  .filterDiv {
+    display: none; /* Hidden by default */
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+  
+  /* Estilo de botones */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 12px 16px;
+    background-color: var(--azul-medio);
+    cursor: pointer;
+  }
+  
+  /* Cambia el color del fondo cuando  mouse-over */
+  .btn:hover {
+    background-color: var(--azul-oscuro);
+  }
+  
+  /* cambia el color a oscuro cuando esta activa */
+  .btn.active {
+    background-color: var(--oscuro);
+    color: white;
+  }
+  /* fin del código de howtow3c filtro de elementos*/
+
+
+/*estilo comun a todos los titulos de las secciones*/
+h2{
+    text-align: center;
+    font-size: 2em;
+}
+
+/* estilo de la cabecera  */
+header{
+    background-color: var(--negro);
+    height: 100vh;
+    z-index: -1;
+/* definir el layout de la cabecera */
+    display: grid;
+    grid-template-columns: 30% 1fr;
+    grid-template-rows: 10% 1fr;
+    grid-template-areas:"nombre imagen "
+                        "menu imagen";
+}
+
+/* codigo para la barra fija*/
+.sidenav {
+    height: 100%; /* Full-height: remove this if you want "auto" height*/ 
+width: 30%;/* Set the width of the sidebar */ 
+    position: fixed; /* Fixed Sidebar (stay in place on scroll) */ 
+    z-index: 1; /* Stay on top */ 
+    top: 0; /* Stay at the top */ 
+    left: 0;
+    background-color: var(--negro);
+    overflow-x: hidden; /* Disable horizontal scroll */ 
+    padding-top: 20px;
+  
+}
+/*fin del código de la barra fija*/
+
+/*resto de estilo para los elementos que estan en la barra fija*/
+header div span{
+    grid-area: logo;
+    color: var(--blanco);
+    font-family: 'Bree Serif', serif;
+}
+header nav{
+    grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    margin-top: 15vh;
+}
+a:hover{
+    background-color: var(--azul-oscuro);
+    padding-left:100px;
+    padding-right: 100px;
+
+}
+
+a{
+    text-decoration: none;
+    color:#fff;
+   padding-top: 2vh;
+}
+#avatar_1{
+    grid-area: imagen;
+    background-image:url(../imagenes/laptop\ reading.png);
+background-size: contain;
+background-repeat: no-repeat;
+background-position: center;
+background-color: #d3d3d3;
+
+}
+header h1{
+    color: var(--blanco);
+    display: flex;
+    align-items: flex-start;
+    justify-content: end;
+    grid-area: nombre;
+    margin-left: 2vw;
+    padding-right:5% ;
+    font-size:5rem ;
+    text-align: end;
+    font-family: 'Bree Serif', serif;
+}
+.letra_azul:hover{
+    color:var(--oscuro);
+    font-size: 1.2em;
+}
+.letra_malva:hover{
+    color:purple;
+    font-size: 1.2em;
+}
+.contenedor_rrss{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 15vh;
+}
+.rrss{
+    max-width: 40px;
+}
+#scroll{
+    position:absolute;
+    bottom: 0;
+    left: 45%;
+}
+/* estilo de la sección sobre mi  */
+#sobre-mi{
+    background-color: var(--blanco);
+height: 50vh;
+padding: 5vw;
+margin-left: 30%;
+}
+#sobremi_titulo{
+ color:var(--oscuro)   
+}
+#sobremi_titulo:hover{
+text-shadow:5px 5px lightgrey;
+text-decoration: underline lightgrey;
+}
+#sobremi-parrafo{
+    margin-top: 5vh;
+    font-size: 1.25em;
+}
+
+/* estilo de la sección trabajos*/
+#trabajos{
+    padding: 5vw;
+    margin-left: 30%;
+}
+#trabajos_titulo{
+    color:var(--oscuro);
+    margin-bottom: 5%;   
+   }
+#trabajos_titulo:hover{
+    text-shadow:5px 5px lightgrey;
+    text-decoration: underline lightgrey;
+    }
+#galeria_container{
+    display: grid;
+    grid-template-columns: auto auto;
+  gap: 1%;
+    grid-template-areas: "foto1 foto2"
+                         "foto3 foto4" 
+                         "foto5 foto6"
+                         "foto7 foto8";
+}
+#imagen1{
+    grid-area: foto1;
+}
+#imagen2{
+    grid-area: foto2;
+    margin-left: auto;
+    margin-right: auto;
+}
+#imagen3{
+    grid-area: foto3;
+    margin-left: auto;
+    margin-right: auto;
+}
+#imagen4{
+    grid-area: foto4;
+    margin-left: auto;
+    margin-right: auto;
+   }
+#imagen5{
+    grid-area: foto5;
+    margin-left: auto;
+    margin-right: auto;
+    }
+#imagen6{
+    grid-area: foto6;  
+    margin-left: auto;
+    margin-right: auto;    
+}
+#imagen7{
+    grid-area:foto7;
+    margin-left: auto;
+    margin-right: auto;
+}
+}
+/***********************************************************************************/
