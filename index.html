@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofia Acevedo Delgado</title>
+    <link rel="icon" href="imagenes/iconos/favicon.png">
+    <link href="estilo/estilo.css" rel="stylesheet">
+    <script src="script/script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="movil">
+        <h1 class="movil">
+            versión movil proximamente
+        </h1>
+    </div>
+    <div id="movil_footer">
+        <a href="alumnos.html">alumnos</a>
+    </div>
+    <header id="inicio">
+        <div class="sidenav">
+            <!-- <span> PORTFOLIO </span> -->
+            
+            <h1 id="h1_nombre">
+                <span class="letra_azul">S</span>
+                <span class="letra_malva">o</span>
+                <span class="letra_azul">f</span>
+                <span class="letra_malva">í</span>
+                <span class="letra_azul">a</span>
+            </h1>
+            <h1 id="h1_apellido">
+                <span class="letra_malva">A</span>
+                <span class="letra_azul">c</span>
+                <span class="letra_malva">e</span>
+                <span class="letra_azul">v</span>
+                <span class="letra_malva">e</span>
+                <span class="letra_azul">d</span>
+                <span class="letra_malva">o</span> 
+                <br>
+            </h1>
+            <div class="contenedor_rrss">
+                <a href="https://github.com/SofyFrontend?tab=repositories">
+                    <img src="imagenes/iconos/github.svg" alt="icono de github, con enlace al perfil de github" class="rrss">
+                </a>
+                <a href="https://www.linkedin.com/in/sofia-acevedo/">
+                    <img src="imagenes/iconos/linkedin.gif" alt="icono animado de linkedin, con enlace al perfil" class="rrss">
+                </a>
+                <a>
+                <img src="imagenes/iconos/netlify.svg" alt="icono de netlify, con enlace al perfil" class="rrss">
+                </a>
+            </div>
+            <nav> 
+                <a href="#inicio"> Inicio </a>
+                <a href="#sobre-mi">Sobre mi</a>
+                <a href="#trabajos">Trabajos</a>
+                <a href="html/alumnos.html">Alumnos</a>
+            </nav>
+        </div>
+        <div id="avatar_1">  </div>
+    </header>
+    <section id="sobre-mi">
+        <h2 id="sobremi_titulo">
+            Sobre mi
+        </h2>
+        <p id="sobremi-parrafo"> 
+            Me gusta el desarrollo web en código HTML, CSS y JS, también uso 
+            gestores de contenido como el wordpress. <br> <br>
+            Tengo formación de diseño de interfaces (UI), diseño de experiencia de usuario (UX) y uso de Figma<br><br>
+            Actualmente trabajo como docente del certificado de profesionalidad de
+            confección y publicación de páginas webs, en la isla de Lanzarote. <br><br>
+            
+        </p>
+        
+    </section>
+    <section id="trabajos">
+<h2 id="trabajos_titulo">
+    Trabajos
+</h2>
+<!-- menu para filtrar los elementos segun web o diseño ui/ux -->
+<div id="myBtnContainer">
+    <button class="btn active" onclick="filterSelection('all')"> Mostrar Todo</button>
+    <button class="btn" onclick="filterSelection('web')"> Maquetación web</button>
+    <button class="btn" onclick="filterSelection('desing')"> Diseño UX/UI</button>
+    <!-- <button class="btn" onclick="filterSelection('sketch')">Sketch Up </button> -->
+</div>
+<div class="container" id="galeria_container" >
+    <div class="filterDiv desing">
+         <img src="imagenes/Logo.png" alt="" id="imagen1">
+    </div>
+    <div class="filterDiv web"> 
+        <img src="imagenes/capturasWeb/mini_galeria1_desktop.png" alt="" id="imagen2" class="filterDiv web">
+    </div>
+    <div class="filterDiv web"> 
+        <img src="imagenes/capturasWeb/mini_galeria1_movil.png" alt="" id="imagen3" class="filterDiv web">
+    </div>
+    <div class="filterDiv web"> 
+        <img src="imagenes/capturasWeb/mini_webMiguelAngel.png" alt="" id="imagen4" class="filterDiv web">
+    </div>
+    <div class="filterDiv desing"> 
+        <img src="imagenes/capturasWeb/donarApp.png" alt="" id="imagen5" class="filterDiv desing">
+    </div>
+    <div class="filterDiv desing"> 
+        <img src="imagenes/capturasWeb/sorteo.png" alt="" id="imagen6" class="filterDiv desing">
+    </div>
+    <div class="filterDiv desing"> 
+        <img src="imagenes/capturasWeb/mini_contratoalquiler.png" alt="" id="imagen7" class="filterDiv desing">
+    </div>
+</div>
+    </section>
+    </body>
+</html>
