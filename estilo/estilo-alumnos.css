@@ -75,10 +75,10 @@ background-clip:text;
         text-decoration: underline;
         margin:2vw;
     }
-    #imagen_1{
+    #imagen_1, #imagen_2, #gif_2{
         text-align: center;
     }
-    #codigo_1{
+    #codigo_1, #codigo_2{
         width: 90%;
     }
     #bg_molde{
@@ -137,7 +137,7 @@ p{
 }
 #section_css{
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
     grid-template-areas: "titulo titulo"
                          "tarea1 tarea2";
     grid-area:titulo;
@@ -151,11 +151,11 @@ article{
     text-decoration: underline;
     margin:2vw;
 }
-#imagen_1{
+#imagen_1, #imagen_2, #gif_2{
     text-align: center;
 }
-#codigo_1{
-    width: 30%;
+#codigo_1, #codigo_2{
+    width: 50%;
 }
 #bg_molde{
     /*posicion, tamaño y fuente del texto*/
