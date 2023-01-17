@@ -11,4 +11,4 @@ particle.js
 
 ## 📌 vista previa
 
-https://github.com/SofyFrontend/sofyfrontend.github.io/blob/main/capura-1.png
+![vistaprevia]https://github.com/SofyFrontend/sofyfrontend.github.io/blob/main/capura-1.png
